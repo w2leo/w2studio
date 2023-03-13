@@ -3,7 +3,6 @@
  * Copyright 2013-2021 Start Bootstrap LLC
  */
 (() => {
-	debugger;
 	('use strict');
 	var t = function (t, e, n, i) {
 		return new (n || (n = Promise))(function (s, a) {
@@ -211,11 +210,7 @@
 						(a = function* () {
 							e.preventDefault(), m.classList.add('d-none');
 							try {
-								console.log('Your data');
-
 								console.log(u(E));
-								console.log('Ready to fetch');
-
 								t(void 0, void 0, void 0, function* () {
 									const e = yield ((e, n) =>
 										t(void 0, void 0, void 0, function* () {
@@ -317,6 +312,6 @@
 			);
 		},
 		h =
-			'%c############################# Start Bootstrap Forms #############################\n###                                                                           ###\n###    To enable this form using Start Bootstrap Forms, simply sign up at:    ###\n###                                                                           ###\n###               https://startbootstrap/solution/contact-forms               ###\n###                                                                           ###\n#################################################################################',
+			'%c############################# Start Bootstrap Forms #############################\n',
 		p = 'color: white; font-style: italic; background-color: #dd3d31; padding: 2px;';
 })();

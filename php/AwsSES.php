@@ -1,6 +1,13 @@
 <?php
 
-require $_SESSION['config']['vendor_dir'] . '/vendor/autoload.php';
+try {
+
+require '/vendor/autoload.php';
+}
+catch (Error $e)
+{
+	require_once '/Users/mikhailleonov/vendor/autoload.php';
+}
 
 use Aws\Ses\SesClient;
 use Aws\Exception\AwsException;

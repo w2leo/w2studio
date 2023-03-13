@@ -214,19 +214,26 @@
 								console.log('Your data');
 
 								console.log(u(E));
-														console.log('Ready to fetch');
-														const t = JSON.stringify(n),
-															i = new Headers({ 'Content-Type': 'application/json' }),
-															s = yield fetch(`/`, {
-																method: 'POST',
-																headers: {
-																  'Content-Type': 'application/json'
-																},
-																body: JSON.stringify(u(E))
-															});
-														if (!(s.status >= 200 && s.status < 300)) throw new Error(`FETCH_RETURNED_STATUS: ${s.status}`);
-														return s;
-									f.classList.remove('d-none'),
+								console.log('Ready to fetch');
+
+								t(void 0, void 0, void 0, function* () {
+									const e = yield ((e, n) =>
+										t(void 0, void 0, void 0, function* () {
+											const t = JSON.stringify(n),
+												i = new Headers({ 'Content-Type': 'application/json' }),
+												s = yield fetch(`/`, {
+													method: 'POST',
+													headers: {
+														'Content-Type': 'application/json'
+													},
+													body: JSON.stringify(u(E))
+												});
+											if (!(s.status >= 200 && s.status < 300)) throw new Error(`FETCH_RETURNED_STATUS: ${s.status}`);
+											return s;
+										}))('/api/latest/solution/forms', n);
+									return yield e.json();
+								});
+								f.classList.remove('d-none'),
 									E.forEach((t) => {
 										t.setAttribute('disabled', '');
 									});

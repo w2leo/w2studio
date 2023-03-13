@@ -2,7 +2,7 @@
 
 try {
 
-require '/vendor/autoload.php';
+require '/home/ec2-user/vendor/autoload.php';
 }
 catch (Error $e)
 {

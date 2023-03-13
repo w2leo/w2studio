@@ -162,14 +162,17 @@
 				</div>
 				<!-- About Section Content-->
 				<div class="row">
-					<div class="col-lg-4 ms-auto">
-						<p class="fs-3 text-decoration-underline  text-secondary text-center">TECHNICAL SKILLS</p>
+					<p class="fs-3 text-decoration-underline text-secondary text-center">TECHNICAL SKILLS</p>
+
+					<div class="col-lg-4 mx-auto">
 						<p class="fs-4">Languages and technologies:</p>
 						<p class="fs-6">C#, PHP, RestAPI, HTML, CSS, JSON, XML, Bootstrap, C++, Python, .Net framework, yaml</p>
 						<p class="fs-4">Amazon Web Services:</p>
 						<p class="fs-6">IAM, EC2, Elastic IP, Load Balancer, Auto Scaling, S3, SES, SNS, RDS, CLI etc.</p>
 						<p class="fs-4">DevOps (basic skills):</p>
 						<p class="fs-6">Linux, Apache, Windows IIS</p>
+					</div>
+					<div class="col-lg-4 mx-auto">
 						<p class="fs-4">Databases:</p>
 						<p class="fs-6">SQL Server, DynamoDB, Firebird SQL, MySQL.</p>
 						<p class="fs-4">Gamedev:</p>
@@ -381,7 +384,7 @@
 										<div class="divider-custom-line"></div>
 									</div>
 									<!-- Portfolio Modal - Video-->
-									<video controls class="col-6">
+									<video controls class="col-6" id="video-pf-2">
 										<source src="assets/video/2-Box_clicker.mp4" type="video/mp4" />
 										Your browser does not support the video tag.
 									</video>
@@ -425,7 +428,7 @@
 										<div class="divider-custom-line"></div>
 									</div>
 									<!-- Portfolio Modal - Video-->
-									<video controls class="col-6">
+									<video controls class="col-6" id="video-pf-3">
 										<source src="assets/video/3-Red ball.mp4" type="video/mp4" />
 										Your browser does not support the video tag.
 									</video>
@@ -464,7 +467,7 @@
 										<div class="divider-custom-line"></div>
 									</div>
 									<!-- Portfolio Modal - Video-->
-									<video controls class="col-6">
+									<video controls class="col-6" id="video-pf-4">
 										<source src="assets/video/4-Runner.mp4" type="video/mp4" />
 										Your browser does not support the video tag.
 									</video>
@@ -506,7 +509,7 @@
 										<div class="divider-custom-line"></div>
 									</div>
 									<!-- Portfolio Modal - Video-->
-									<video controls class="col-6">
+									<video controls class="col-6" id="video-pf-5">
 										<source src="assets/video/5-Collect items.mp4" type="video/mp4" />
 										Your browser does not support the video tag.
 									</video>
@@ -548,7 +551,7 @@
 										<div class="divider-custom-line"></div>
 									</div>
 									<!-- Portfolio Modal - Video-->
-									<video controls class="col-6">
+									<video controls class="col-6" id="video-pf-6">
 										<source src="assets/video/6 - MapGen.mp4" type="video/mp4" />
 										Your browser does not support the video tag.
 									</video>
@@ -577,5 +580,27 @@
 		<!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
 		<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
 		<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+		<!-- JQuery -->
+		<script
+			src="https://code.jquery.com/jquery-3.6.4.js"
+			integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+			crossorigin="anonymous"></script>
+
+		<!-- Close video on modal closing -->
+		<script>
+			function stopVideoOnModalClose(videoId) {
+				// Get the video element by ID
+				var video = document.getElementById(videoId);
+					video.pause();
+			}
+
+			$('.modal').on('hidden.bs.modal', function (event) {
+				// Get the ID of the video element from the closed modal
+				var videoId = $(event.target).find('video').attr('id');
+				// Call the stopVideoOnModalClose function with the ID of the video element
+				stopVideoOnModalClose(videoId);
+			});
+		</script>
 	</body>
 </html>

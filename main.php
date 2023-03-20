@@ -627,6 +627,7 @@
 	<!-- Core theme JS-->
 	<script src="js/scripts.js"></script>
 	<script src="js/bootstrap.js"></script>
+	<script src="js/lotteryscripts.js"></script>
 	<!-- JQuery -->
 	<script src="https://code.jquery.com/jquery-3.6.4.js"
 		integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>

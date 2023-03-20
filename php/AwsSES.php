@@ -1,11 +1,8 @@
 <?php
 
 try {
-
-require '/home/ec2-user/vendor/autoload.php';
-}
-catch (Error $e)
-{
+	require '/home/ec2-user/vendor/autoload.php';
+} catch (Error $e) {
 	require_once '/Users/mikhailleonov/vendor/autoload.php';
 }
 

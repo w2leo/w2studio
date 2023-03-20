@@ -78,7 +78,7 @@ class LotterySender extends AwsDynamoDB
 		}
 		else
 		{
-			$this->AddItem($this->email, [UserDataFields::SentDates->name], [$currentDate]);
+			$this->AddItem($this->email, [UserDataFields::SentDates->name], [array($currentDate)]);
 		}
 	}
 
@@ -88,16 +88,11 @@ class LotterySender extends AwsDynamoDB
 		if (isset($this->data[UserDataFields::SentDates->name])) {
 			return !$this->FindDate($this->data[UserDataFields::SentDates->name]['NS']);
 		}
-
 		return true;
 	}
 
 	private function FindDate($dates)
 	{
-
-
-		$dd = $this->GetDateInt();
-		$tst = in_array($dd, $dates);
 		return in_array($this->GetDateInt(), $dates);
 	}
 

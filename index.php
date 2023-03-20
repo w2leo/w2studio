@@ -15,6 +15,9 @@ ob_start();
 
 session_start();
 
+//Clear
+unset($_SESSION['lotMessage']);
+
 /* ----------- debug info ----------- */
 // foreach ($_SESSION['message'] as $key => $item) {
 // 	echo '<p class="text-danger">message #'.$key.': '.$item.'</p>';

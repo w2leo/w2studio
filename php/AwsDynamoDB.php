@@ -254,7 +254,10 @@ abstract class AwsDynamoDB
 
 	protected function Format($value)
 	{
-		return array($this->GetAwsType($value) => $value);
+		$arrayType = $this->GetAwsType($value);
+		if (is_array($value))
+			$value = array_map('strval', $value);
+		return array($arrayType => $value);
 	}
 
 	protected function GetStatusCode($result)
@@ -270,7 +273,7 @@ abstract class AwsDynamoDB
 			case 'b':
 				return 'BOOL';
 			case 'a':
-				return isset($value['SS']) ? 'SS' : 'NS';
+				return isset($value['S']) ? 'SS' : 'NS';
 			default:
 				return 'S';
 		}

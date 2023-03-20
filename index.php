@@ -43,7 +43,7 @@ try {
 			SendFormEmail(file_get_contents('php://input'));
 		}
 	}
-	include('main.php');
+	include('main.html');
 } catch (Error $e) {
 	return;
 }

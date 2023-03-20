@@ -630,21 +630,6 @@
 	<!-- JQuery -->
 	<script src="https://code.jquery.com/jquery-3.6.4.js"
 		integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
-	<!-- Close video on modal closing -->
-	<script>
-		function stopVideoOnModalClose(videoId) {
-			// Get the video element by ID
-			var video = document.getElementById(videoId);
-			video.pause();
-		}
-
-		$('.modal').on('hidden.bs.modal', function (event) {
-			// Get the ID of the video element from the closed modal
-			var videoId = $(event.target).find('video').attr('id');
-			// Call the stopVideoOnModalClose function with the ID of the video element
-			stopVideoOnModalClose(videoId);
-		});
-	</script>
 </body>
 
 </html>

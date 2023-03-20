@@ -69,7 +69,6 @@ class LotterySender extends AwsDynamoDB
 	private function AddDate()
 	{
 		$currentDate = $this->GetDateInt();
-
 		if (isset($this->data[UserDataFields::Email->name]))
 		{
 			$newDates = $this->data[UserDataFields::SentDates->name]['NS'];

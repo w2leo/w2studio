@@ -38,7 +38,6 @@ try {
 			$result = $db->SendEmail();
 			echo $result->value;
 			return;
-			// $_SESSION['lotMessage'] = $result->value;
 		} else {
 			SendFormEmail(file_get_contents('php://input'));
 		}

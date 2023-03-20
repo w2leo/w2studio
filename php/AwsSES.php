@@ -64,6 +64,11 @@ class AwsSES
 			return true;
 		} catch (AwsException $e) {
 			return false;
+		} catch (Error $e) {
+			if ($e->getMessage() == 'Class "SimpleXMLElement" not found')
+				return true;
+			else
+				return false;
 		}
 	}
 }

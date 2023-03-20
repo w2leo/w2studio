@@ -53,7 +53,6 @@ function SendFormEmail($json_str)
 	SendMessage(EMAIL, PrepareMessage($json_obj));
 }
 
-
 function PrepareMessage($json_obj)
 {
 	$msg = '<h3> You get message from w2studio contact form</h3>';

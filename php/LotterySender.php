@@ -56,9 +56,11 @@ class LotterySender extends AwsDynamoDB
 
 	private function Send()
 	{
-		$message = 'Your mail accepted';
+
+		$msg = '<h3> You get message from w2studio lottery form</h3>';
+		$msg .= '<p>Your mail was accepted</p>';
 		$ses = new AwsSES();
-		return $ses->SendEmail($this->email, $message);
+		return $ses->SendEmail($this->email, $msg);
 	}
 
 	private function GetDateInt(): int
@@ -69,14 +71,11 @@ class LotterySender extends AwsDynamoDB
 	private function AddDate()
 	{
 		$currentDate = $this->GetDateInt();
-		if (isset($this->data[UserDataFields::Email->name]))
-		{
+		if (isset($this->data[UserDataFields::Email->name])) {
 			$newDates = $this->data[UserDataFields::SentDates->name]['NS'];
 			$newDates[] = strval($currentDate);
 			$this->UpdateItem($this->email, [UserDataFields::SentDates->name], [$newDates]);
-		}
-		else
-		{
+		} else {
 			$this->AddItem($this->email, [UserDataFields::SentDates->name], [array($currentDate)]);
 		}
 	}

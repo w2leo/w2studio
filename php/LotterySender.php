@@ -81,6 +81,10 @@ class LotterySender extends AwsDynamoDB
 		} else {
 			$this->AddItem($this->email, [UserDataFields::SentDates->name], [array($currentDate)]);
 		}
+
+		if (!isset($this->data)) {
+			$this->GetItem($this->email);
+		}
 	}
 
 	private function CheckDate()

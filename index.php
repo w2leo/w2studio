@@ -36,7 +36,9 @@ try {
 		if (isset($_POST['userEmail'])) {
 			$db = new LotterySender($_POST['userEmail']);
 			$result = $db->SendEmail();
-			$_SESSION['lotMessage'] = $result->value;
+			echo $result->value;
+			return;
+			// $_SESSION['lotMessage'] = $result->value;
 		} else {
 			SendFormEmail(file_get_contents('php://input'));
 		}

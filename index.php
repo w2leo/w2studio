@@ -3,8 +3,6 @@
 define('EMAIL', 'w2studio@rfbuild.ru');
 
 ini_set('display_errors', 0);
-// ini_set ('display_startup_errors', 1);
-// error_reporting (E_ALL);
 
 require_once('php/AwsSES.php');
 require_once('php/LotterySender.php');
@@ -14,15 +12,6 @@ require_once('php/Validation.php');
 ob_start();
 
 session_start();
-
-//Clear
-unset($_SESSION['lotMessage']);
-
-/* ----------- debug info ----------- */
-// foreach ($_SESSION['message'] as $key => $item) {
-// 	echo '<p class="text-danger">message #'.$key.': '.$item.'</p>';
-// }
-// $_SESSION['message'] = [];
 
 try {
 	//Check and validate GET and POST requests
@@ -50,7 +39,8 @@ try {
 function SendFormEmail($json_str)
 {
 	$json_obj = json_decode($json_str);
-	SendMessage(EMAIL, PrepareMessage($json_obj));
+	$ses = new AwsSES();
+	$ses->SendEmail(EMAIL, PrepareMessage($json_obj));
 }
 
 function PrepareMessage($json_obj)
@@ -64,10 +54,5 @@ function PrepareMessage($json_obj)
 	return $msg;
 }
 
-function SendMessage($email, $message)
-{
-	$ses = new AwsSES();
-	return $ses->SendEmail($email, $message);
-}
 
 ?>

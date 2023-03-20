@@ -26,6 +26,7 @@ enum UserDataReturnValues: string
 
 class LotterySender extends AwsDynamoDB
 {
+	private $counParticipations;
 	private $email;
 	/**
 	 * Constructor for connecting to table LotteryUsers
@@ -40,6 +41,7 @@ class LotterySender extends AwsDynamoDB
 		);
 		$this->primaryField = 'Email';
 		$this->tableName = 'LotteryUsers';
+		$this->counParticipations = 0;
 		$this->email = $email;
 		parent::__construct();
 	}
@@ -47,8 +49,8 @@ class LotterySender extends AwsDynamoDB
 	public function SendEmail()
 	{
 		if ($this->CheckDate()) {
-			$this->Send();
 			$this->AddDate();
+			$this->Send();
 			return UserDataReturnValues::Sucsess;
 		}
 		return UserDataReturnValues::AlreadySent;
@@ -56,9 +58,10 @@ class LotterySender extends AwsDynamoDB
 
 	private function Send()
 	{
-
+		$count = count($this->data[UserDataFields::SentDates->name]['NS']);
 		$msg = '<h3> You get message from w2studio lottery form</h3>';
 		$msg .= '<p>Your mail was accepted</p>';
+		$msg .= '<p>You have participated ' . $count . ' times in lottery.';
 		$ses = new AwsSES();
 		return $ses->SendEmail($this->email, $msg);
 	}

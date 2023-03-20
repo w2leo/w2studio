@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<title>w2studio</title>
+	<!-- Favicon-->
+	<link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+	<!-- Font Awesome icons (free version)-->
+	<!-- <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script> -->
+	<script src="https://kit.fontawesome.com/971a9b0c56.js" crossorigin="anonymous"></script>
+
+	<!-- Google fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+		type="text/css" />
+	<!-- Core theme CSS (includes Bootstrap)-->
+	<link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+	<!-- Navigation-->
+	<nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+		<div class="container">
+			<a class="navbar-brand" href="#page-top">FULLSTACK DEVELOP</a>
+			<button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
+				aria-expanded="false" aria-label="Toggle navigation">
+				Menu
+				<i class="fa fa-bars"></i>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item mx-0 mx-lg-1">
+						<a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portfolio</a>
+					</li>
+					<li class="nav-item mx-0 mx-lg-1">
+						<a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a>
+					</li>
+					<li class="nav-item mx-0 mx-lg-1">
+						<a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- Masthead-->
+	<header class="masthead bg-primary text-white text-center">
+		<div class="container d-flex align-items-center flex-column">
+			<!-- Masthead Avatar Image-->
+			<img class="masthead-avatar mb-5" src="assets/img/logo_transparent.png" alt="..." />
+			<!-- Masthead Heading-->
+			<h1 class="masthead-heading text-uppercase mb-0">w2Studio</h1>
+			<!-- Icon Divider-->
+			<div class="divider-custom divider-light">
+				<div class="divider-custom-line"></div>
+				<div class="divider-custom-icon">
+					<i class="fa fa-globe"></i>
+				</div>
+				<div class="divider-custom-line"></div>
+			</div>
+			<!-- Masthead Subheading-->
+			<p class="masthead-subheading font-weight-light mb-0"><i class="fa fa-code"></i> Frontend</p>
+			<p class="masthead-subheading font-weight-light mb-0"><i class="fa fa-gears"></i> Backend</p>
+			<p class="masthead-subheading font-weight-light mb-0"><i class="fa fa-network-wired"></i> AWS</p>
+			<p class="masthead-subheading font-weight-light mb-0"><i class="fa fa-gamepad"></i> Gamedev</p>
+		</div>
+	</header>
+	<!-- Lottery section-->
+	<section class="page-section bg-warning text-white mb-0" id="lottery">
+		<div class="text-uppercase text-black-50 text-center m-4">Try to win discount!</div>
+		<form class="user" action="#" method="post">
+			<div class="container d-flex align-items-center justify-content-center">
+				<div class="form-group form-control-user">
+					<label for="inputEmail">Email address</label>
+					<input type="email" class="form-control" name="userEmail" id="inputEmail"
+						aria-describedby="emailHelp" placeholder="Enter email" />
+					<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+						else.</small>
+				</div>
+				<div class="text-danger" id="submitReturnMessage">
+					<div class="text-center mb-3">
+						<?php if (isset($_SESSION['lotMessage']))
+							echo $_SESSION['lotMessage']; ?>
+					</div>
+				</div>
+				<button type="submit" class="btn btn-primary flex-row">Submit</button>
+			</div>
+		</form>
+	</section>
+	<!-- Portfolio Section-->
+	<section class="page-section portfolio" id="portfolio">
+		<div class="container">
+			<!-- Portfolio Section Heading-->
+			<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
+			<!-- Icon Divider-->
+			<div class="divider-custom">
+				<div class="divider-custom-line"></div>
+				<div class="divider-custom-icon"><i class="fa fa-briefcase"></i></div>
+				<div class="divider-custom-line"></div>
+			</div>
+			<!-- Portfolio Grid Items-->
+			<div class="row justify-content-center">
+				<!-- Portfolio Item 1-->
+				<div class="col-md-4 col-lg-3 col-sm-6 col-8 mb-5">
+					<div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+						<div
+							class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+							<div class="portfolio-item-caption-content text-center text-white">
+								<i class="fa fa-plus fa-3x"></i>
+							</div>
+						</div>
+						<img class="img-fluid" src="assets/img/portfolio/1-pollution.png" alt="..." />
+					</div>
+				</div>
+				<!-- Portfolio Item 2-->
+				<div class="col-md-4 col-lg-3 col-sm-6 col-8 mb-5">
+					<div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
+						<div
+							class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+							<div class="portfolio-item-caption-content text-center text-white">
+								<i class="fa fa-plus fa-3x"></i>
+							</div>
+						</div>
+						<img class="img-fluid rounded mx-auto d-block" src="assets/img/portfolio/2-clicker.png"
+							alt="..." />
+					</div>
+				</div>
+				<!-- Portfolio Item 3-->
+				<div class="col-md-4 col-lg-3 col-sm-6 col-8 mb-5">
+					<div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
+						<div
+							class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+							<div class="portfolio-item-caption-content text-center text-white">
+								<i class="fa fa-plus fa-3x"></i>
+							</div>
+						</div>
+						<img class="img-fluid" src="assets/img/portfolio/3-red_ball.png" alt="..." />
+					</div>
+				</div>
+				<!-- Portfolio Item 4-->
+				<div class="col-md-4 col-lg-3 col-sm-6 col-8 mb-5">
+					<div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
+						<div
+							class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+							<div class="portfolio-item-caption-content text-center text-white">
+								<i class="fa fa-plus fa-3x"></i>
+							</div>
+						</div>
+						<img class="img-fluid" src="assets/img/portfolio/4-runner.png" alt="..." />
+					</div>
+				</div>
+				<!-- Portfolio Item 5-->
+				<div class="col-md-4 col-lg-3 col-sm-6 col-8 mb-5">
+					<div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
+						<div
+							class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+							<div class="portfolio-item-caption-content text-center text-white">
+								<i class="fa fa-plus fa-3x"></i>
+							</div>
+						</div>
+						<img class="img-fluid" src="assets/img/portfolio/5-arcade.png" alt="..." />
+					</div>
+				</div>
+				<!-- Portfolio Item 6-->
+				<div class="col-md-4 col-lg-3 col-sm-6 col-8 mb-5">
+					<div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
+						<div
+							class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+							<div class="portfolio-item-caption-content text-center text-white">
+								<i class="fa fa-plus fa-3x"></i>
+							</div>
+						</div>
+						<img class="img-fluid" src="assets/img/portfolio/6-mapgen.png" alt="..." />
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- About Section-->
+	<section class="page-section bg-primary text-white mb-0" id="about">
+		<div class="container">
+			<!-- About Section Heading-->
+			<h2 class="page-section-heading text-center text-uppercase text-white">TECHNICAL SKILLS</h2>
+			<!-- Icon Divider-->
+			<div class="divider-custom divider-light">
+				<div class="divider-custom-line"></div>
+				<div class="divider-custom-icon"><i class="fa fa-code"></i></div>
+				<div class="divider-custom-line"></div>
+			</div>
+			<!-- About Section Content-->
+			<div class="row">
+				<div class="col-lg-4 mx-auto">
+					<p class="fs-4">Languages and technologies:</p>
+					<p class="fs-6">C#, PHP, RestAPI, HTML, CSS, JSON, XML, Bootstrap, C++, Python, .Net framework, yaml
+					</p>
+					<p class="fs-4">Amazon Web Services:</p>
+					<p class="fs-6">IAM, EC2, Elastic IP, Load Balancer, Auto Scaling, S3, SES, SNS, RDS, CLI etc.</p>
+					<p class="fs-4">DevOps (basic skills):</p>
+					<p class="fs-6">Linux, Apache, Windows IIS</p>
+				</div>
+				<div class="col-lg-4 mx-auto">
+					<p class="fs-4">Databases:</p>
+					<p class="fs-6">SQL Server, DynamoDB, Firebird SQL, MySQL.</p>
+					<p class="fs-4">Gamedev:</p>
+					<p class="fs-6">Unity Engine</p>
+					<p class="fs-4">Other:</p>
+					<p class="fs-6">Project and team management, Git, Adobe PS, Task Tracking systems.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Contact Section-->
+	<section class="page-section" id="contact">
+		<div class="container">
+			<!-- Contact Section Heading-->
+			<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
+			<!-- Icon Divider-->
+			<div class="divider-custom">
+				<div class="divider-custom-line"></div>
+				<div class="divider-custom-icon"><i class="fa fa-envelope"></i></div>
+				<div class="divider-custom-line"></div>
+			</div>
+			<!-- Contact Section Form-->
+			<div class="row justify-content-center">
+				<div class="col-lg-8 col-xl-7">
+					<!-- * * * * * * * * * * * * * * *-->
+					<!-- * * SB Forms Contact Form * *-->
+					<!-- * * * * * * * * * * * * * * *-->
+					<form id="contactForm" data-sb-form-api-token="API_TOKEN" method="post" action="#">
+						<!-- Name input-->
+						<div class="form-floating mb-3">
+							<input class="form-control" id="name" type="text" placeholder="Enter your name..."
+								data-sb-validations="required" />
+							<label for="name">Full name</label>
+							<div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+						</div>
+						<!-- Email address input-->
+						<div class="form-floating mb-3">
+							<input class="form-control" id="email" type="email" placeholder="name@example.com"
+								data-sb-validations="required,email" />
+							<label for="email">Email address</label>
+							<div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+							<div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+						</div>
+						<!-- Phone number input-->
+						<div class="form-floating mb-3">
+							<input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890"
+								data-sb-validations="required" />
+							<label for="phone">Phone number</label>
+							<div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.
+							</div>
+						</div>
+						<!-- Message input-->
+						<div class="form-floating mb-3">
+							<textarea class="form-control" id="message" type="text"
+								placeholder="Enter your message here..." style="height: 10rem"
+								data-sb-validations="required"></textarea>
+							<label for="message">Message</label>
+							<div class="invalid-feedback" data-sb-feedback="message:required">A message is required.
+							</div>
+						</div>
+						<!-- Submit success message-->
+						<!---->
+						<!-- This is what your users will see when the form-->
+						<!-- has successfully submitted-->
+						<div class="d-none" id="submitSuccessMessage">
+							<div class="text-center mb-3">
+								<div class="fw-bolder">Form submission successful!</div>
+							</div>
+						</div>
+						<!-- Submit error message-->
+						<!---->
+						<!-- This is what your users will see when there is-->
+						<!-- an error submitting the form-->
+						<div class="d-none" id="submitErrorMessage">
+							<div class="text-center text-danger mb-3">Error sending message!</div>
+						</div>
+						<!-- Submit Button-->
+						<button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Send</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Footer-->
+	<footer class="footer text-center">
+		<div class="container">
+			<div class="row justify-content-center">
+				<!-- Footer Location-->
+				<!-- <div class="col-lg-4 mb-5 mb-lg-0">
+						<h4 class="text-uppercase mb-4">Location</h4>
+						<p class="lead mb-0">
+							2215 John Daniel Drive
+							<br />
+							Clark, MO 65243
+						</p>
+					</div> -->
+				<!-- Footer Social Icons-->
+				<div class="col-lg-4 mb-5 mb-lg-0">
+					<h4 class="text-uppercase mb-4">Around the Web</h4>
+					<a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/mikhail.leonov.507"
+						target="_blank"><i class="fa fa-facebook-f"></i></a>
+					<a class="btn btn-outline-light btn-social mx-1" href="https://t.me/msleonov" target="_blank"><i
+							class="fa fa-paper-plane"></i></a>
+					<a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/mikhail-leonov/"
+						target="_blank"><i class="fa fa-linkedin"></i></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Copyright Section-->
+	<div class="copyright py-4 text-center text-white">
+		<div class="container">
+			<small>Copyright &copy; w2studio 2023 </small>
+		</div>
+	</div>
+	<!-- Portfolio Modals-->
+	<div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1"
+		aria-hidden="true">
+		<div class="modal-dialog modal-xl">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body text-center pb-5">
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-lg-8">
+								<!-- Portfolio Modal - Title-->
+								<h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Air Pollution
+									Monitoring</h2>
+								<!-- Icon Divider-->
+								<div class="divider-custom">
+									<div class="divider-custom-line"></div>
+									<div class="divider-custom-icon">
+										<i class="fa fa-star"></i>
+									</div>
+									<div class="divider-custom-line"></div>
+								</div>
+								<!-- Portfolio Modal - carousel images-->
+								<div id="carouselAirSite" class="carousel slide">
+									<div class="carousel-inner">
+										<div class="carousel-item active">
+											<img src="https://d3g55nxhykyr7v.cloudfront.net/img/corousele_site/site1.png"
+												class="d-block w-100" alt="Oops! File lost." />
+										</div>
+										<div class="carousel-item">
+											<img src="https://d3g55nxhykyr7v.cloudfront.net/img/corousele_site/site2.png"
+												class="d-block w-100" alt="Oops! File lost." />
+										</div>
+										<div class="carousel-item">
+											<img src="https://d3g55nxhykyr7v.cloudfront.net/img/corousele_site/site3.png"
+												class="d-block w-100" alt="Oops! File lost." />
+										</div>
+										<div class="carousel-item">
+											<img src="https://d3g55nxhykyr7v.cloudfront.net/img/corousele_site/site4.png"
+												class="d-block w-100" alt="Oops! File lost." />
+										</div>
+										<button class="carousel-control-prev bg-opacity-25 bg-secondary" type="button"
+											data-bs-target="#carouselAirSite" data-bs-slide="prev">
+											<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+											<span class="visually-hidden">Previous</span>
+										</button>
+										<button class="carousel-control-next bg-opacity-25 bg-secondary" type="button"
+											data-bs-target="#carouselAirSite" data-bs-slide="next">
+											<span class="carousel-control-next-icon" aria-hidden="true"></span>
+											<span class="visually-hidden">Next</span>
+										</button>
+									</div>
+								</div>
+
+								<!-- Portfolio Modal - Text-->
+								<p class="mb-4">
+									This website allows you to monitor real-time Air pollution in different cities
+									around the world. Filling simple login and
+									registration form provides access to air quality data.
+								</p>
+								<p>
+									<a href="http://rfbuild.ru" target="_blank" class="btn btn-info">Visit website</a>
+								</p>
+								<button class="btn btn-primary" data-bs-dismiss="modal">
+									<i class="fa fa-xmark fa-fw"></i>
+									Close Window
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Portfolio Modal 2-->
+	<div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2"
+		aria-hidden="true">
+		<div class="modal-dialog modal-xl">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body text-center pb-5">
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-lg-8">
+								<!-- Portfolio Modal - Title-->
+								<h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Box clicker</h2>
+								<!-- Icon Divider-->
+								<div class="divider-custom">
+									<div class="divider-custom-line"></div>
+									<div class="divider-custom-icon">
+										<i class="fa fa-star"></i>
+									</div>
+									<div class="divider-custom-line"></div>
+								</div>
+								<!-- Portfolio Modal - Video-->
+								<video controls class="col-lg-10 col-6" id="video-pf-2">
+									<source src="https://d3g55nxhykyr7v.cloudfront.net/2-Box_clicker.mp4"
+										type="video/mp4" />
+									Your browser does not support the video tag.
+								</video>
+
+								<!-- Portfolio Modal - Text-->
+								<p class="mb-4">Unity Learn course game where the player should smash the boxes avoiding
+									bombs. Availiable at itch.io</p>
+								<p>
+									<a href="https://w2leo.itch.io/boxclicker" target="_blank" class="btn btn-info">Try
+										it now!</a>
+								</p>
+
+								<button class="btn btn-primary" data-bs-dismiss="modal">
+									<i class="fa fa-xmark fa-fw"></i>
+									Close Window
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Portfolio Modal 3-->
+	<div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3"
+		aria-hidden="true">
+		<div class="modal-dialog modal-xl">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body text-center pb-5">
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-lg-8">
+								<!-- Portfolio Modal - Title-->
+								<h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Red ball game</h2>
+								<!-- Icon Divider-->
+								<div class="divider-custom">
+									<div class="divider-custom-line"></div>
+									<div class="divider-custom-icon">
+										<i class="fa fa-star"></i>
+									</div>
+									<div class="divider-custom-line"></div>
+								</div>
+								<!-- Portfolio Modal - Video-->
+								<video controls class="col-lg-10 col-6" id="video-pf-3">
+									<source src="https://d3g55nxhykyr7v.cloudfront.net/3-Red ball.mp4"
+										type="video/mp4" />
+									Your browser does not support the video tag.
+								</video>
+								<!-- Portfolio Modal - Text-->
+								<p class="mb-4">Mini game with flying red ball. Pass all obstacles and get to the
+									finish!</p>
+								<button class="btn btn-primary" data-bs-dismiss="modal">
+									<i class="fa fa-xmark fa-fw"></i>
+									Close Window
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Portfolio Modal 4-->
+	<div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4"
+		aria-hidden="true">
+		<div class="modal-dialog modal-xl">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body text-center pb-5">
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-lg-8">
+								<!-- Portfolio Modal - Title-->
+								<h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Runner</h2>
+								<!-- Icon Divider-->
+								<div class="divider-custom">
+									<div class="divider-custom-line"></div>
+									<div class="divider-custom-icon">
+										<i class="fa fa-star"></i>
+									</div>
+									<div class="divider-custom-line"></div>
+								</div>
+								<!-- Portfolio Modal - Video-->
+								<video controls class="col-lg-10 col-6" id="video-pf-4">
+									<source src="https://d3g55nxhykyr7v.cloudfront.net/4-Runner.mp4" type="video/mp4" />
+									Your browser does not support the video tag.
+								</video>
+								<!-- Portfolio Modal - Text-->
+								<p class="mb-4">Unity Learn course game. Simple 3D runner with obstacles</p>
+								<button class="btn btn-primary" data-bs-dismiss="modal">
+									<i class="fa fa-xmark fa-fw"></i>
+									Close Window
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Portfolio Modal 5-->
+	<div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModal5"
+		aria-hidden="true">
+		<div class="modal-dialog modal-xl">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body text-center pb-5">
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-lg-8">
+								<!-- Portfolio Modal - Title-->
+								<h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Collect items</h2>
+								<!-- Icon Divider-->
+								<div class="divider-custom">
+									<div class="divider-custom-line"></div>
+									<div class="divider-custom-icon">
+										<i class="fa fa-star"></i>
+									</div>
+									<div class="divider-custom-line"></div>
+								</div>
+								<!-- Portfolio Modal - Video-->
+								<video controls class="col-lg-10 col-6" id="video-pf-5">
+									<source src="https://d3g55nxhykyr7v.cloudfront.net/5-Collect items.mp4"
+										type="video/mp4" />
+									Your browser does not support the video tag.
+								</video>
+								<!-- Portfolio Modal - Text-->
+								<p class="mb-4">
+									Mini arcade game. The purpose of the game is to collect all items on map in a
+									limited time. UI allows to set up level settings.
+								</p>
+								<button class="btn btn-primary" data-bs-dismiss="modal">
+									<i class="fa fa-xmark fa-fw"></i>
+									Close Window
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Portfolio Modal 6-->
+	<div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModal6"
+		aria-hidden="true">
+		<div class="modal-dialog modal-xl">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body text-center pb-5">
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-lg-8">
+								<!-- Portfolio Modal - Title-->
+								<h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Game map creator
+								</h2>
+								<!-- Icon Divider-->
+								<div class="divider-custom">
+									<div class="divider-custom-line"></div>
+									<div class="divider-custom-icon">
+										<i class="fa fa-star"></i>
+									</div>
+									<div class="divider-custom-line"></div>
+								</div>
+								<!-- Portfolio Modal - Video-->
+								<video controls class="col-lg-10 col-6" id="video-pf-6">
+									<source src="https://d3g55nxhykyr7v.cloudfront.net/6 - MapGen.mp4"
+										type="video/mp4" />
+									Your browser does not support the video tag.
+								</video>
+								<!-- Portfolio Modal - Text-->
+								<p class="mb-4">
+									Universal map generator. Create your own beautiful worlds, include fields, lakes,
+									mountains and oceans. Any climate zone could be
+									customized: from permafrost to deserts. Various settings could be modified.
+								</p>
+								<button class="btn btn-primary" data-bs-dismiss="modal">
+									<i class="fa fa-xmark fa-fw"></i>
+									Close Window
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Bootstrap core JS-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- Core theme JS-->
+	<script src="js/scripts.js"></script>
+	<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+	<!-- * *                               SB Forms JS                               * *-->
+	<!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+	<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+	<!-- <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script> -->
+	<script src="js/bootstrap.js"></script>
+
+	<!-- JQuery -->
+	<script src="https://code.jquery.com/jquery-3.6.4.js"
+		integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+	<!-- Close video on modal closing -->
+	<script>
+		function stopVideoOnModalClose(videoId) {
+			// Get the video element by ID
+			var video = document.getElementById(videoId);
+			video.pause();
+		}
+
+		$('.modal').on('hidden.bs.modal', function (event) {
+			// Get the ID of the video element from the closed modal
+			var videoId = $(event.target).find('video').attr('id');
+			// Call the stopVideoOnModalClose function with the ID of the video element
+			stopVideoOnModalClose(videoId);
+		});
+	</script>
+</body>
+
+</html>

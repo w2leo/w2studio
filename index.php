@@ -2,11 +2,12 @@
 
 define('EMAIL', 'w2studio@rfbuild.ru');
 
-ini_set ('display_errors', 0);
+ini_set('display_errors', 0);
 // ini_set ('display_startup_errors', 1);
 // error_reporting (E_ALL);
 
 require_once('php/AwsSES.php');
+require_once('php/LotterySender.php');
 require_once('php/Validation.php');
 
 //enable input bufferization
@@ -24,17 +25,28 @@ try {
 	//Check and validate GET and POST requests
 	if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET)) {
 		Validation::ValidateArray($_GET);
-		include('main.html');
 	}
 
 	if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST)) {
 		Validation::ValidateArray($_POST);
-		$json_str = file_get_contents('php://input');
-		$json_obj = json_decode($json_str);
-		SendMessage(EMAIL, PrepareMessage($json_obj));
+
+		if (isset($_POST['userEmail'])) {
+			$db = new LotterySender($_POST['userEmail']);
+			$result = $db->SendEmail();
+			$_SESSION['lotMessage'] = $result->value;
+		} else {
+			SendFormEmail(file_get_contents('php://input'));
+		}
 	}
+	include('main.php');
 } catch (Error $e) {
 	return;
+}
+
+function SendFormEmail($json_str)
+{
+	$json_obj = json_decode($json_str);
+	SendMessage(EMAIL, PrepareMessage($json_obj));
 }
 
 

@@ -626,17 +626,10 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 	<!-- Core theme JS-->
 	<script src="js/scripts.js"></script>
-	<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-	<!-- * *                               SB Forms JS                               * *-->
-	<!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-	<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-	<!-- <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script> -->
 	<script src="js/bootstrap.js"></script>
-
 	<!-- JQuery -->
 	<script src="https://code.jquery.com/jquery-3.6.4.js"
 		integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
-
 	<!-- Close video on modal closing -->
 	<script>
 		function stopVideoOnModalClose(videoId) {
